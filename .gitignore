@@ -14,5 +14,6 @@ __pycache__/
 # Environments
 .env
 
-# Tensorboard
+# Experiments
 runs/*
+videos/*
