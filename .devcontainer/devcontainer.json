@@ -1,0 +1,14 @@
+{
+    "name": "dqn-vessel-exampple",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "customizations": {
+        "extensions": [
+            "ms-python.python",
+            "ms-python.vscode-pylance"
+        ]
+    },
+    "remoteUser": "mambauser"
+}
