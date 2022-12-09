@@ -4,6 +4,7 @@ FROM mambaorg/micromamba:bionic-cuda-11.6.2
 ENV PATH=/opt/conda/bin:$PATH
 
 USER root
+ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
     && apt-get -y upgrade \
     && apt-get -y install --no-install-recommends \
