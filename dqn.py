@@ -12,6 +12,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 import vessl
+import vessl.integration.tensorboard
 from gymnasium.wrappers.record_episode_statistics import RecordEpisodeStatistics
 from gymnasium.wrappers.record_video import RecordVideo
 from torch.utils.tensorboard.writer import SummaryWriter
@@ -174,7 +175,8 @@ def main():
     args = parse_args()
 
     # Setup VESSL
-    vessl.init(tensorboard=True)
+    vessl.init()
+    vessl.integration.tensorboard.integrate_tensorboard()
 
     # Setup Tensorboard
     file_name = os.path.basename(__file__).rstrip(".py")

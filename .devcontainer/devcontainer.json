@@ -1,22 +1,21 @@
 {
-    "name": "dqn-vessel-exampple",
-    "build": {
-        "dockerfile": "Dockerfile",
-        "context": ".."
-    },
+    "name": "dqn-vessel-example",
+    "image": "junhoseo/dqn-vessl-example:2.0",
     "customizations": {
-        "settings": {
-            "python.defaultInterpreterPath": "/opt/conda/bin/python",
-            "python.languageServer": "Default",
-            "python.linting.enabled": true,
-            "python.linting.pylintEnabled": true,
-            "python.formatting.blackPath": "/opt/conda/bin/black",
-            "python.linting.pylintPath": "/opt/conda/bin/pylint"
-        },
-        "extensions": [
-            "ms-python.python",
-            "ms-python.vscode-pylance"
-        ]
+        "vscode": {
+            "settings": {
+                "python.defaultInterpreterPath": "/opt/conda/bin/python",
+                "python.languageServer": "Default",
+                "python.linting.enabled": true,
+                "python.linting.pylintEnabled": true,
+                "python.formatting.blackPath": "/opt/conda/bin/black",
+                "python.linting.pylintPath": "/opt/conda/bin/pylint"
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance"
+            ]
+        }
     },
     "remoteUser": "mambauser"
 }
